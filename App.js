@@ -63,7 +63,8 @@ const AlbumStack = ({navigation}) => {
         <Stack.Screen 
           name="Detail" 
           component={DetailScreen}
-          options={({ route }) => ({ 
+          options={({route})=>({
+           
             title: '步行紀錄',
             headerStyle: {
               backgroundColor: '#2B475D',
