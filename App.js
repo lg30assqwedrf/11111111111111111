@@ -23,6 +23,7 @@ import MeScreen from './src/screens/MeScreen';
 import SearchScreen from './src/screens/SearchScreen';
 import albumData from "./src/json/albums.json";
 import ShareScreen from './src/screens/ShareScreen';
+import targetScreen from "./src/screens/targetScreen";
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -75,8 +76,26 @@ const AlbumStack = ({navigation}) => {
               fontWeight: '400',
               fontSize: 20
             },  
-           })}
-        />      
+          })}
+        />
+         <Stack.Screen 
+          name="target" 
+          component={targetScreen}
+          options={({route})=>({
+           
+            title: '每日目標',
+            headerStyle: {
+              backgroundColor: '#2B475D',
+              height:90,
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: '400',
+              fontSize: 20
+            },  
+          })}
+        />
+                
       </Stack.Navigator>
   );
 }

@@ -3,6 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View, Image,ScrollView, Linking} fr
 import AlbumDetail from "../components/AlbumDetail";
 import albumData from "../json/albums.json";
 import DetailScreen from "./DetailScreen";
+import targetScreen from "./targetScreen";
 
 
 const AlbumScreen = ({navigation }) => {
@@ -11,7 +12,9 @@ const AlbumScreen = ({navigation }) => {
     <ScrollView>
     <View style={styles.back}>
         <View style={styles.top}>
-        <TouchableOpacity  onPress={() => alert('ＴＡＢ！')}>
+        <TouchableOpacity 
+            onPress={() => navigation.navigate('target', targetScreen)}
+          >
             <Text style={styles.cata}>每日目標</Text>
             </TouchableOpacity>
             <TouchableOpacity  onPress={() => alert('ＴＡＢ！')}>

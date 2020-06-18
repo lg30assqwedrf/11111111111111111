@@ -17,20 +17,15 @@ export default class App extends React.Component {
     return (
       <View style={style.back}>
         <ScrollView style={{paddingTop: 20}}>
-        <View style={style.search}> 
-        <Input
-  placeholder='INPUT WITH ERROR MESSAGE'
-  errorStyle={{ color: 'red' }}
-  errorMessage='ENTER A VALID ERROR HERE'
-/>
-
-<Input placeholder="Password" secureTextEntry={true} />
+      
+       
       <SearchBar
+       style={style.searchbar}
         placeholder="Type Here..."
         onChangeText={this.updateSearch}
         value={search}
       />
-         </View>
+    
          <View style={style.picback1}>
             <Image
                         style={style.pic1}
@@ -70,14 +65,7 @@ const style = StyleSheet.create({
     height:800,
    
   },
-  search:{
-    height:50,
-    width:360,
-    marginLeft:5,
-    marginTop:0,
-       
-       
-  },
+  
   bottom:{
     marginTop:18,
     marginLeft:90,
@@ -129,7 +117,15 @@ const style = StyleSheet.create({
     fontSize:18,
     marginTop:-40,
     marginLeft:100
-  }
+  },
+  search:{
+    height:50,
+    width:360,
+    marginLeft:5,
+    marginTop:0,
+       
+       
+  },
 
 }
 );
